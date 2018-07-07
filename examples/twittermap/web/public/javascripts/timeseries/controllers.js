@@ -43,16 +43,6 @@ angular.module('cloudberry.timeseries', ['cloudberry.common'])
     $compile(countDiv)($scope);
     stats.appendChild(countDiv);
 
-    // add button
-    var buttonDiv = document.createElement("div");
-    buttonDiv.id = "button-div";
-    buttonDiv.innerHTML = [
-      "<button ng-click = 'count = count + 1' ng-init='count=0'> Increment </button>",
-      "<span> count: {{count}} </span>",
-    ].join("");
-    $compile(buttonDiv)($scope);
-    stats.appendChild(buttonDiv);
-
 
     $scope.$watch(
       function() {
