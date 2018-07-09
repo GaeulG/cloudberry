@@ -25,9 +25,13 @@
    <search-bar></search-bar>
    <predefined-keywords></predefined-keywords>
 
+  <!-- added Rounded switch -->
+  <label class="switch" >
+    <input type="checkbox" onclick="showStats()" id="id_checkbox">
+    <span class="slider round"></span>
+  </label>
 
-
-  <div class="stats">
+  <div class="stats" id="id_stats">
     <time-series id="chart"></time-series>
   </div>
 
@@ -78,9 +82,20 @@
     <exception-bar></exception-bar>
   </div>
 
-
+<script>
+function showStats() {
+    var checkBox = document.getElementById("id_checkbox");
+    var div_stats = document.getElementById("id_stats");
+    if (checkBox.checked == true){
+        div_stats.style.display = "block";
+    } else {
+       div_stats.style.display = "none";
+    }
+}
+</script>
 
 </div>
+
 
 
 }
